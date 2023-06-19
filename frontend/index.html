@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coffee game | Grupp 11</title>
+</head>
+
+<body>
+  <div class="container start-container">
+    <div class="heading-container">
+      <h1 class="start-heading">Coffee game</h1>
+    </div>
+    <div class="nickname-container">
+      <form id="nickname-form">
+        <div class="form-group">
+          <label for="nickname-input" class="nickname-label mb-2">Nickname</label>
+          <input type="text" class="form-control nickname-input" id="nickname-input" placeholder="....." required>
+        </div>
+        <button type="submit" class="btn nickname-submit mt-4" id="nickname-submit">Spela spel</button>
+      </form>
+      <button class="to-lobby-btn"><i class="bi bi-clipboard2-data-fill"></i> Gå till lobby</button>
+    </div>
+  </div>
+
+  <div class="search-lobby search-lobby-container hide">
+    <!-- <button class="go-back-btn">Tillbaka till start</button> -->
+    <div class="search-lobby-content">
+      <div class="waiting-page">
+        <!-- waiting for player -->
+      </div>
+    </div>
+  </div>
+
+  <div class="lobby lobby-container hide">
+    <h2 class="mt-5 text-center spelrummet">Lobby</h2>
+    <div class="go-back-btn-div">
+      <button class="go-back-btn">Tillbaka till start</button>
+    </div>
+    <div class="lobby-content">
+      <div class="recent-games-column white-column">
+      </div>
+      <div class="highscore-column white-column">
+      </div>
+      <div class="ongoing-games-column white-column"></div>
+    </div>
+  </div>
+
+  <!-- game add hide class-->
+  <div class="container game-room-container hide">
+    <div>
+      <h2 class="mt-5 text-center spelrummet">Spelrummet</h2>
+    </div>
+    <div class="player-container row mt-2 p-3 text-center">
+      <ul class="col list-unstyled text-start player-1-list">
+        <li id="player-1-name">Player 1 name</li>
+        <li id="player-1-clock" class="player-clock">00 : 00 : 00</li>
+        <li id="player-1-answer-clock" class="player-clock hide-timer">00 : 00 : 00</li>
+      </ul>
+      <div class="col text-center fs-1">
+        <span id="player-1-score">0</span>
+        <span>-</span>
+        <span id="player-2-score">0</span>
+      </div>
+      <ul class="col list-unstyled text-end player-2-list">
+        <li id="player-2-name">Player 2 name</li>
+        <li id="player-2-clock" class="player-clock">00 : 00 : 00</li>
+        <li id="player-2-answer-clock" class="player-clock hide-timer">00 : 00 : 00</li>
+      </ul>
+    </div>
+    <div class="d-flex justify-content-center">
+      <div class="playerLeft hide"></div>
+    </div>
+    <div id="game-grid">
+      <div class="coffee-grid grid-x-5 grid-y-3"></div>
+    </div>
+    <div class="rounds-div text-center mt-3"></div>
+  </div>
+
+  <div class="container gameover-container hide">
+    <!--Show winner and confetti-->
+  </div>
+
+
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id           String    @id @map("_id")
+  nickname     String
+  reactionTime Float?
+  score        Int?
+  gameroomId   String?   @db.ObjectId
+  gameroom     Gameroom? @relation(fields: [gameroomId], references: [id])
+  Results      Result?   @relation(fields: [resultId], references: [id])
+  resultId     String?   @db.ObjectId
+}
+
+model Gameroom {
+  id            String  @id @default(auto()) @map("_id") @db.ObjectId
+  name          String
+  rounds        Int
+  userConnected Boolean @default(false)
+  users         User[]
+}
+
+model Result {
+  id              String  @id @default(auto()) @map("_id") @db.ObjectId
+  reactionTimeAvg Float[]
+  users           User[]
+}

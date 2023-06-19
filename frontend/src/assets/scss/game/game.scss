@@ -1,0 +1,183 @@
+/* FONT STACKS */
+$ff-main: 'Cairo', sans-serif;
+$ff-header: 'Annie Use Your Telescope', cursive;
+
+.spelrummet {
+    font-family: $ff-h2;
+}
+
+.mt-5 {
+    margin-top: 2rem !important;
+}
+
+.rounds-div {
+    text-align: center;
+    padding: 10px;
+    font-size: 1.5rem;
+}
+
+.game-room-container {
+    height: 100vh;
+    overflow: hidden;
+}
+
+.player-container {
+    font-family: $ff-main;
+
+    .player-clock {
+        font-size: 20px;
+    }
+}
+
+#game-grid {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    // width: 100vw;
+    height: 60vh;
+    background-color: #F7E6E2;
+
+    >* {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .grid-x-1 {
+        grid-column: 1 / 2;
+    }
+
+    .grid-x-2 {
+        grid-column: 2 / 3;
+    }
+
+    .grid-x-3 {
+        grid-column: 3 / 4;
+    }
+
+    .grid-x-4 {
+        grid-column: 4 / 5;
+    }
+
+    .grid-x-5 {
+        grid-column: 5 / 6;
+    }
+
+    .grid-x-6 {
+        grid-column: 6 / 7;
+    }
+
+    .grid-x-7 {
+        grid-column: 7 / 8;
+    }
+
+    .grid-x-8 {
+        grid-column: 8 / 9;
+    }
+
+    .grid-x-9 {
+        grid-column: 9 / 10;
+    }
+
+    .grid-x-10 {
+        grid-column: 10 / 11;
+    }
+
+    .grid-y-1 {
+        grid-row: 1 / 2;
+    }
+
+    .grid-y-2 {
+        grid-row: 2 / 3;
+    }
+
+    .grid-y-3 {
+        grid-row: 3 / 4;
+    }
+
+    .grid-y-4 {
+        grid-row: 4 / 5;
+    }
+
+    .grid-y-5 {
+        grid-row: 5 / 6;
+    }
+
+    .grid-y-6 {
+        grid-row: 6 / 7;
+    }
+
+    .grid-y-7 {
+        grid-row: 7 / 8;
+    }
+
+    .grid-y-8 {
+        grid-row: 8 / 9;
+    }
+
+    .grid-y-9 {
+        grid-row: 9 / 10;
+    }
+
+    .grid-y-10 {
+        grid-row: 10 / 11;
+    }
+}
+
+.playerLeft {
+    width: 100%;
+    height: 80%;
+    background-color: rgb(206, 104, 82);
+    padding: 2rem;
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: #F7E6E2;
+
+    h2 {
+        text-align: center;
+        font-size: 1.5rem;
+        color: #F7E6E2;
+    }
+
+    p {
+        margin-top: 1rem;
+    }
+
+    .goto-start {
+        font-family: $ff-h2;
+        background-color: transparent;
+        border-radius: 8px;
+        padding: 0.5rem;
+        border: 2px solid #F7E6E2;
+        color: #F7E6E2;
+        font-size: 1.5rem;
+        margin-top: 1.5rem;
+        z-index: 2;
+        align-self: center;
+    }
+}
+
+.coffee {
+    width: 5rem;
+    height: 5rem;
+}
+
+.hide-timer {
+    display: none;
+    visibility: hidden;
+}
+
+@media screen and (max-width: 600px) {
+    .player-container {
+        .player-clock {
+            font-size: 15px;
+        }
+    }
+
+    .rounds-div {
+        text-align: center;
+    }
+}

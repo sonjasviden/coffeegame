@@ -1,0 +1,92 @@
+/* FONT STACKS */
+$ff-main: 'Cairo', sans-serif;
+$ff-header: 'Annie Use Your Telescope', cursive;
+
+.start-container {
+    background-image: url('../images/start.png');
+    background-size: cover;
+    max-width: unset;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .heading-container {
+        height: 60%;
+        width: 100%;
+
+
+        .start-heading {
+            float: left;
+            padding: 50px;
+            color: #FFF;
+            font-family: $ff-header;
+            font-size: 80px;
+        }
+    }
+
+    .nickname-container {
+        height: 40%;
+        width: 30%;
+
+        .nickname-label {
+            width: 100%;
+            color: #FFF;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        .nickname-input {
+            background-color: #D38483;
+            color: #FFF;
+            border-radius: 15px;
+            border: 0;
+        }
+
+        .nickname-input::placeholder {
+            color: #FFF;
+            letter-spacing: 3px;
+        }
+
+        .nickname-submit {
+            width: 100%;
+            height: 70px;
+            background-color: #7FA2C3;
+            color: #FFF;
+            text-transform: uppercase;
+            font-size: 25px;
+            border-radius: 15px;
+        }
+    }
+
+    .to-lobby-btn {
+        background-color: transparent;
+        color: #F7E6E2;
+        text-transform: uppercase;
+        font-size: 20px;
+        border-radius: 15px;
+        font-family: $ff-main;
+        text-transform: none;
+        border: none;
+        width: 100%;
+        height: 70px;
+        margin-top: 10px;
+
+        .bi-clipboard2-data-fill {
+            font-size: 30px;
+        }
+    }
+
+    .to-lobby-btn:hover {
+        color: #7FA2C3;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .start-container {
+        background-position: center;
+
+        .nickname-container {
+            width: 100%;
+        }
+    }
+}

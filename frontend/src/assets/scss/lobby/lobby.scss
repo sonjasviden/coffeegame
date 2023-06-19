@@ -1,0 +1,193 @@
+/* FONT STACKS */
+$ff-main: 'Cairo', sans-serif;
+$ff-header: 'Annie Use Your Telescope', cursive;
+$ff-h2: 'Reenie Beanie';
+
+.search-lobby-container {
+    background-color: #E7A7A5;
+    height: 100vh;
+    width: 100vw;
+    margin: auto;
+    padding: 70px 0;
+
+    .gif-img {
+        border-radius: 100%;
+        pointer-events: none;
+        width: 150px;
+        height: 150px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .search-lobby-content {
+        display: flex;
+        justify-content: center;
+        padding: 2rem;
+
+        .search-lobby-heading {
+            font-family: $ff-h2;
+            text-align: center;
+            padding-bottom: 2rem;
+        }
+
+        .search-lobby-heading2 {
+            padding-top: 4rem;
+            font-family: $ff-h2;
+            text-align: center;
+        }
+
+        .search-player-btn {
+            width: 100%;
+            height: 70px;
+            background-color: #7FA2C3;
+            color: #FFF;
+            text-transform: uppercase;
+            font-size: 25px;
+            border-radius: 15px;
+            font-family: $ff-main;
+            text-transform: none;
+        }
+    }
+
+    .go-back-btn {
+        font-family: $ff-h2;
+        background-color: transparent;
+        border-radius: 8px;
+        margin-left: 2rem;
+        padding: 0.5rem;
+        border: 2px solid black;
+        color: black;
+        font-size: 1.2rem;
+    }
+
+    .go-back-btn:hover {
+        border: 2px solid #7FA2C3;
+        color: #7FA2C3;
+    }
+}
+
+.lobby-container {
+    height: 100vh;
+    overflow: hidden;
+
+    .go-back-btn {
+        font-family: $ff-h2;
+        background-color: transparent;
+        border-radius: 8px;
+        margin-left: 2rem;
+        padding: 0.5rem;
+        border: 2px solid black;
+        color: black;
+        font-size: 1.2rem;
+    }
+
+    .lobby-content {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 2rem;
+
+        .white-column {
+            font-family: "Cairo", sans-serif;
+            background-color: #F7E6E2;
+            height: 70vh;
+            width: 30%;
+            text-align: center;
+            border-radius: 15px;
+            padding: 1rem;
+            box-shadow: 5px 5px 15px 0px rgb(0 0 0 / 25%);
+
+            .h3 {
+                font-size: 1.5rem;
+                padding: 1rem;
+                line-height: 5mm;
+            }
+        }
+
+        .highscore-column {
+            overflow: scroll;
+
+            h2 {
+                font-size: 15px;
+                padding: 10px;
+            }
+
+            .highscore-list {
+                list-style: none;
+                display: flex;
+                justify-content: center;
+
+                span {
+                    padding: 10px 0;
+                    text-align: center;
+                }
+            }
+        }
+
+        .ongoing-games-column {
+            overflow: scroll;
+
+            .ongoing-list {
+                list-style: none;
+                display: flex;
+                justify-content: space-between;
+
+                span {
+                    padding: 10px 0;
+                }
+            }
+        }
+
+        .recent-games-column {
+            overflow: scroll;
+
+            .recent-games-list {
+                list-style: none;
+                display: flex;
+                justify-content: space-between;
+
+                span {
+                    padding: 10px 0;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    h3,
+    .h3 {
+        font-size: 1rem;
+    }
+
+    .lobby-container {
+
+        h2 {
+            font-size: 2rem;
+        }
+
+        .lobby-content {
+            padding: 0rem;
+            padding-top: 1rem;
+
+            .white-column {
+                height: 60vh;
+            }
+        }
+
+        .go-back-btn-div {
+            text-align: center;
+
+            .go-back-btn {
+                margin-left: 0;
+            }
+        }
+    }
+
+    span {
+        font-size: 8px;
+        padding: 5px 0;
+    }
+
+}
